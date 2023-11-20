@@ -12,12 +12,12 @@ const Header = () => {
         <>
             <div className="container mainheader">
                 <div className="header-logo">
-                    <img className='logo' src={Logo} alt="#" />
+                   <Link to="/"><img className='logo' src={Logo} alt="#" /></Link> 
                     <div className="nav-menu">
                         <ul>
-                            <li><Link to="#">Jobs</Link></li>
-                            <li><Link to="/About">Industries & Solutions</Link></li>
-                            <li><Link to="/Contact">About Us</Link></li>
+                            <li><Link to="/Job">Jobs</Link></li>
+                            <li><Link to="/IndustriesSolutions">Industries & Solutions</Link></li>
+                            <li><Link to="/About">About Us</Link></li>
                             <li><Link to="/Resource">Resources</Link></li>
                         </ul>
                     </div>

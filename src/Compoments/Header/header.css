@@ -18,6 +18,7 @@
 .header-logo {
   padding: 5px 0px;
   display: flex;
+  align-items: center;
 }
 .nav-menu {
   padding: 25px 30px;

@@ -110,7 +110,7 @@
 
 // export default Login;
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -133,12 +133,11 @@ const Login = () => {
 				// body: JSON.stringify(data)
 			});
 			const data = await response.json();
-			console.log('data', data);
 			if (response.status === 200) {
-				localStorage.setItem('authUser', JSON.stringify(data));
+				localStorage.setItem('authUser', JSON.stringify(data?.token));
 				setTimeout(() => {
 					navigate('/dashboard');
-				}, [1000]);
+				}, [500]);
 			} else {
 				alert('error found')
 			}
@@ -146,10 +145,16 @@ const Login = () => {
 			console.log(error);
 		}
 	};
+
+	useEffect(()=>{
+		if(!!localStorage.getItem('authUser')){
+			navigate('/dashboard');
+		}
+	}, [])
 	return (
 		<>
 			<form onSubmit={(e) => handleSubmit(e)}>
-				<h1 style={{ color: '#ccc' }}>Login</h1>
+				<h1 >Login</h1>
 				<input
 					type="text"
 					placeholder="Enter your username"

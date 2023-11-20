@@ -8,9 +8,8 @@ const Home = () => {
   return (
     <>
       <Header />
-
       <button>
-        <Link to="/login" style={{ textDecoration: 'none', color: '#fff' }}> Login </Link>
+        <Link to="/login" style={{ textDecoration: 'none' }}> Login </Link>
       </button>
     </>
   )

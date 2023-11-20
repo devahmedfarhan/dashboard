@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from '../../Compoments/Header/Header';
 
-const Contact = () => (
+const IndustriesSolutions = () => (
     <>
     <Header /> 
     <div className='container'>
-        <h1 className="title is-1">This is the Contact Page</h1>
+        <h1 className="title is-1">This is the IndustriesSolutions Page</h1>
         <p>
             Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
             inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus
@@ -17,4 +17,4 @@ const Contact = () => (
    
 );
 
-export default Contact;
+export default IndustriesSolutions;
