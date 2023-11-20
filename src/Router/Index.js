@@ -14,11 +14,9 @@ import ProtectedRoutes from './ProtectedRoutes';
 
 const Index = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    console.log('isLoggedInIndex', isLoggedIn);
 
     const checkUserToken = () => {
         const userToken = localStorage.getItem('authUser');
-        console.log('userToken', userToken);
         if (!userToken || userToken === 'undefined') {
             setIsLoggedIn(false);
         }

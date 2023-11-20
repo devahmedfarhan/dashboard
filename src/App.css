@@ -134,4 +134,14 @@
 
 
 /* Emploin Buttons */
+tr , table , tbody , td ,thead , th 
+{
+  border: #000000 1px solid;
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 30px;
+
+
+}
+
 
