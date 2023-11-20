@@ -59,10 +59,12 @@
 
 .headerButtonsGroup .signUp {
   background: #0a75bd;
-  color: #fff;
+  color: #fff ;
   border: none;
   padding: 8px 30px;
   font-family: "Roboto Medium";  
+  text-decoration: none;
+
 }
 
 .headerButtonsGroup .saleEnq {
