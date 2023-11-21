@@ -26,9 +26,9 @@ const Header = () => {
                 <div className="headerButtonsGroup">
                     <button type="button" className="signUp"> <Link to="/register" style={{ textDecoration: 'none', color: '#fff'}}> Register </Link> </button>
                     <button type="button" className="saleEnq"><Link to="salesform" style={{ textDecoration: 'none' , color: '#fff'}}> Sales Enquiry</Link></button>
-                    <div class="dropdown">
-                        <button class="dropbtn"> <img className='Langicon' src={LangIcon} alt="#" /> EN <img className='Arrow' src={Arrow} alt="#" /></button>
-                        <div class="dropdown-content">
+                    <div className="dropdown">
+                        <button className="dropbtn"> <img className='Langicon' src={LangIcon} alt="#" /> EN <img className='Arrow' src={Arrow} alt="#" /></button>
+                        <div className="dropdown-content">
                             <a href="#">English</a>
                             <a href="#">Hindi</a>
 

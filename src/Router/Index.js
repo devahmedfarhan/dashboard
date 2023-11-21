@@ -37,9 +37,9 @@ const Index = () => {
                 <Route path="/resource" element={<Resources />} />
                 <Route path="/register" exact element={<Register />} />
                 <Route path="/login" element={<Login />} />
-                {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+                <Route path="/dashboard/*" element={<Layout />} />
 
-                {
+                {/* {
                     isLoggedIn === true &&
                     <Route
                         path='/dashboard'
@@ -49,8 +49,8 @@ const Index = () => {
                             </ProtectedRoutes>
                         }
                     />
-                }
-                <Route path="*" element={<Navigate to='/dashboard' />} />
+                } */}
+                {/* <Route path="*" element={<Navigate to='/dashboard' />} /> */}
             </Routes>
         </BrowserRouter>
     )
