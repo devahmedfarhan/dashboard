@@ -1,7 +1,5 @@
-// import IndividualLayout from "src/Individual/Layout/IndividualLayout";
-import Layout from '../Layout/Layout'
 import TableData from "../Compoments/table/TableData";
-import Payroll from '../Compoments/Payroll/Payroll';
+import Dashboard from '../Admin/Dashboard';
   
 // export const roles = {
 //     INDIVIDUAL: 'Employee',
@@ -15,13 +13,13 @@ import Payroll from '../Compoments/Payroll/Payroll';
 
 export const LayoutItem = [
     {
-        path: "/tabledata",
+        path: "/",
         exact: true,
-        component: TableData
+        component: Dashboard
     },
     {
-        path: "/payroll",
+        path: "/user-management",
         exact: true,
-        component: Payroll
+        component: TableData
     }
 ];

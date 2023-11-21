@@ -13,11 +13,16 @@ const DashSidebar = () => {
                 <nav className="sidebar_nav">
                     <ul>
                         <li>
-                            <Link class="active" to="/dashboard/tabledata">
+                            <Link className="" to="/dashboard">
                                 <img src="../images/dashboard.svg" alt="" /> Dashboard
                             </Link>
                         </li>
                         <li>
+                            <Link to="/dashboard/user-management">
+                                <img src="../images/payroll.svg" alt="" /> User Management
+                            </Link>
+                        </li>
+                        {/* <li>
                             <Link to="/dashboard/profile">
                                 <img src="../images/profile.svg" alt="" /> Profile
                             </Link>
@@ -36,7 +41,7 @@ const DashSidebar = () => {
                             <Link to="/dashboard/payroll">
                                 <img src="../images/payroll.svg" alt="" /> Payroll
                             </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
 

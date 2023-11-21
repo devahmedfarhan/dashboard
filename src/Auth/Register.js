@@ -111,7 +111,7 @@
 // 								className={validName || !user ? 'hide' : 'invalid'}
 // 							/>
 // 						</label>
-// 						<input
+// 						<Input 
 // 							type="text"
 // 							id="username"
 // 							ref={userRef}
@@ -149,7 +149,7 @@
 // 								className={validPwd || !pwd ? 'hide' : 'invalid'}
 // 							/>
 // 						</label>
-// 						<input
+// 						<Input 
 // 							type="password"
 // 							id="password"
 // 							onChange={(e) => setPwd(e.target.value)}
@@ -189,7 +189,7 @@
 // 								className={validMatch || !matchPwd ? 'hide' : 'invalid'}
 // 							/>
 // 						</label>
-// 						<input
+// 						<Input 
 // 							type="password"
 // 							id="confirm_pwd"
 // 							onChange={(e) => setMatchPwd(e.target.value)}
@@ -207,7 +207,7 @@
 // 							}
 // 						>
 // 							<FontAwesomeIcon icon={faInfoCircle} />
-// 							Must match the first password input field.
+// 							Must match the first password Input  field.
 // 						</p>
 
 // 						<button
@@ -232,12 +232,18 @@
 // export default Register;
 
 
+import { Button, Input } from "@mui/joy";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import Header from "../Compoments/Header/Header";
 const Register = () => {
 	const navigate = useNavigate();
+	const [fullname, setFullname] = useState('');
 	const [username, setUsername] = useState('');
+	const [email, setEmail] = useState('');
+	const [phone, setPhone] = useState('');
+	const [gender, setGender] = useState('');
+	const [location, setLocation] = useState('');
 	const [password, setPassword] = useState('');
 
 	const handleSubmit = async (e) => {
@@ -267,28 +273,118 @@ const Register = () => {
 	};
 	return (
 		<>
-			<form onSubmit={(e) => handleSubmit(e)}>
-				<h1 style={{ color: '#ccc' }}>Register</h1>
-				<input
-					type="text"
-					placeholder="Enter your username"
-					name="username"
-					value={username}
-					onChange={(e) => setUsername(e.target.value)}
-				/>
+			<Header />
 
-				<input
-					type="password"
-					placeholder="Enter your password"
-					name="password"
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-				/>
+			<div className="register" >
+				<div className="registerPage">
+					<section class="container">
+						<header>Registration Form</header>
+						<form onSubmit={(e) => handleSubmit(e)}>
+							<div class="input-box">
+								<label className="label" >Full Name</label>
+								<Input
+									size="sm"
+									type="text"
+									placeholder="Enter your Fullname"
+									name="fullname"
+									value={fullname}
+									onChange={(e) => setFullname(e.target.value)}
+								/>
+							</div>
+							<div class="input-box">
+								<label className="label">UserName</label>
+								<Input
+									size="sm"
+									type="text"
+									placeholder="Enter your Username"
+									name="username"
+									value={username}
+									onChange={(e) => setUsername(e.target.value)}
+								/>
+							</div>
+							<div class="input-box">
+								<label className="label">Email Address</label>
+								<Input
+									size="sm"
+									type="email"
+									placeholder="Enter your Email"
+									name="email"
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
+								/>
+							</div>
+							<div class="input-box">
+								<label className="label">Contact Details </label>
+								<Input
+									size="sm"
+									type="tel"
+									placeholder="Enter your Phone"
+									name="phone"
+									value={phone}
+									onChange={(e) => setPhone(e.target.value)}
+								/>
+							</div>
+							<div class="input-box">
+								<label className="label">Gender</label>
+								<Input
+									size="sm"
+									type="text"
+									placeholder="Enter your Gender"
+									name="gender"
+									value={gender}
+									onChange={(e) => setGender(e.target.value)}
+								/>
+							</div>
+							<div class="input-box">
+								<label className="label">Location</label>
+								<Input
+									size="sm"
+									type="text"
+									placeholder="Enter your Location"
+									name="location"
+									value={location}
+									onChange={(e) => setLocation(e.target.value)}
+								/>
+							</div>
+							<div class="input-box">
+								<label className="label">Password</label>
+								<Input
+									size="sm"
+									type="password"
+									placeholder=""
+									name="password"
+									value={password}
+									onChange={(e) => setPassword(e.target.value)}
+								/>
 
-				<button type="submit">Submit</button>
-			</form>
+							</div>
+
+
+							<Button type="submit">Submit</Button>
+						</form>
+					</section>
+
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+			</div >
 		</>
 	)
 };
 
 export default Register;
+
+
+
+
+

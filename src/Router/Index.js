@@ -13,7 +13,7 @@ import ProtectedRoutes from './ProtectedRoutes';
 
 
 const Index = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);    
 
     const checkUserToken = () => {
         const userToken = localStorage.getItem('authUser');

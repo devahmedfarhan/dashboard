@@ -4,12 +4,17 @@ const jwt = require('jsonwebtoken');
 
 module.exports.register = async (req, res) => {
     try {
-        const { username, password } = req.body;
+        const { fullname, username, password, email, phone, gender, location } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
 
         const newUser = new AuthModel({
+            fullname,
             username,
-            password: hashedPassword
+            email,
+            phone,
+            gender,
+            location,
+            password: hashedPassword,
         });
         const saveUser = await newUser.save();
         res.status(201).json(saveUser);
