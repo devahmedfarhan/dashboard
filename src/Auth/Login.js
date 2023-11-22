@@ -153,6 +153,7 @@ const Login = () => {
 	}, [])
 	return (
 		<>
+		<div className="login">
 			<form onSubmit={(e) => handleSubmit(e)}>
 				<h1 >Login</h1>
 				<input
@@ -173,6 +174,8 @@ const Login = () => {
 
 				<button type="submit">Submit</button>
 			</form>
+		</div>
+			
 		</>
 	)
 };

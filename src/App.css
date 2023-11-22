@@ -134,10 +134,6 @@
 
 /* Emploin Buttons */
 
-
-
-
-
 /* 
 Css Started */
 .main_wrap,
@@ -242,7 +238,7 @@ a {
   display: flex;
 }
 .left_sidebar {
-  width: 212px;
+  width: 16%;
   box-shadow: 2px 0px 10px 0px rgba(112, 112, 112, 0.25);
   height: 100%;
   background-color: #fff;
@@ -270,6 +266,12 @@ a {
   border-left: 4px solid transparent;
   display: flex;
   align-items: center;
+  color: var(--black-100, #1c1c1c);
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px; /* 0% */
 }
 .sidebar_nav {
   padding: 20px 20px 0 0;
@@ -285,6 +287,18 @@ a {
   background-image: none;
 }
 
+/* Styles for mobile */
+@media (max-width: 768px) {
+  .main_wrap {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+}
+
 /* ===================== Right Panel ================ */
 
 header {
@@ -293,6 +307,7 @@ header {
 }
 .right_panel {
   flex-grow: 1;
+  width: 82%;
 }
 .breadcrumb li,
 .breadcrumb li a {
@@ -345,7 +360,8 @@ header {
 /* ======================= Content ======================= */
 
 .content {
-  padding: 37px 22px;
+  padding: 20px 20px;
+  position: fixed;
 }
 .card {
   background-color: #fff;
@@ -388,23 +404,20 @@ header {
   flex-grow: 1;
 }
 
-
-
-
 /* 
 ExtraCss
 */
 
-
-.layoutWrapper
-{
+.layoutWrapper {
   background-color: white;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;  
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  border-radius: 15px;
+  height: 50rem;
 }
 
-.register
-{
+.register {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -412,22 +425,42 @@ ExtraCss
   justify-content: space-evenly;
 }
 
-
-.input-box
-{
+.input-box {
   margin: 10px;
- 
 }
 
-.input-box .label{
- 
+.input-box .label {
   font-size: 14px;
 
   color: #525256;
   margin-bottom: 10px !important;
- 
+}
+
+.landingLogin {
+  height: 100%;
+  background: #f2f8f2;
+  width: 100%;
+}
+
+.copyrights {
+  color: var(--linear-grey, #7b809a);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.pageHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
+.contentheading
+{
 
-
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+}

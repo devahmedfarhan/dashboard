@@ -8,6 +8,7 @@ import Menu from '@mui/joy/Menu';
 import MenuButton from '@mui/joy/MenuButton';
 import MenuItem from '@mui/joy/MenuItem';
 import MoreVert from '@mui/icons-material/MoreVert';
+import { Settings } from '@mui/icons-material';
 
 const DashHeader = () => {
     const navigate = useNavigate();
@@ -61,8 +62,8 @@ const DashHeader = () => {
                     </a> */}
                     <Dropdown>
                         <MenuButton
-                            slots={{ root: IconButton }}
-                            slotProps={{ root: { variant: 'outlined', color: 'neutral' } }}
+                            slots={{ root: Settings }}
+                            slotProps={{ root: { color: 'neutral' } }}
                         >
                             <MoreVert />
                         </MenuButton>

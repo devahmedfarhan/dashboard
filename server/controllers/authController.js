@@ -17,7 +17,10 @@ module.exports.register = async (req, res) => {
             password: hashedPassword,
         });
         const saveUser = await newUser.save();
-        res.status(201).json(saveUser);
+        res.status(201).json({
+            saveUser,
+            message: 'User Registered'
+        });
 
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -51,10 +54,12 @@ module.exports.login = async (req, res) => {
     }
 };
 
+
+// get api
 module.exports.getAllData = async (req, res) => {
     try {
         const userData = await AuthModel.find();
- 
+
         if (!userData) {
             return res.status(404).json({ message: 'User not found' });
         }
@@ -63,3 +68,51 @@ module.exports.getAllData = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
+
+//get single user
+module.exports.getSingleData = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const userData = await AuthModel.findById(id);
+
+        if (!userData) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        res.status(200).json(userData);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+// update api
+module.exports.updateData = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const userData = await AuthModel.findById(id);
+
+        if (!userData) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        const updateData = await AuthModel.findByIdAndUpdate(id, req.body, { new: true });
+        res.status(200).json(updateData);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+module.exports.deleteData = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const userData = await AuthModel.findById(id);
+
+        if (!userData) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        await AuthModel.findByIdAndDelete(id);
+        res.status(200).json({ message: 'User deleted' });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}

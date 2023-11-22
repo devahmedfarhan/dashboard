@@ -22,6 +22,7 @@ const Layout = () => {
                             </div>
 
                         </div>
+                        <p className='copyrights'>  © 2023, All Rights Reserved. Emploin  </p>
                     </div>
 
                 </div>
