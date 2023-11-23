@@ -10,13 +10,22 @@ import Job from '../View/Pages/Job';
 import Layout from '../Layout/Layout';
 import Dashboard from '../Admin/Dashboard';
 import ProtectedRoutes from './ProtectedRoutes';
+import AdminLayout from '../Layout/AdminLayout';
 
 
 const Index = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);    
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const [isUser, setIsUser] = useState(null);
+
+    useEffect(() => {
+        const getLocalStorage = JSON.parse(localStorage.getItem('authPerson'));
+        setIsUser(getLocalStorage);
+    }, [])
 
     const checkUserToken = () => {
         const userToken = localStorage.getItem('authUser');
+
         if (!userToken || userToken === 'undefined') {
             setIsLoggedIn(false);
         }
@@ -37,7 +46,15 @@ const Index = () => {
                 <Route path="/resource" element={<Resources />} />
                 <Route path="/register" exact element={<Register />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/dashboard/*" element={<Layout />} />
+
+
+                {
+                    isUser === 'user' ? (
+                        <Route path="/dashboard/*" element={<Layout />} />
+                    ) : (
+                        <Route path="/dashboard/*" element={<AdminLayout />} />
+                    )
+                }
 
                 {/* {
                     isLoggedIn === true &&

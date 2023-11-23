@@ -245,6 +245,7 @@ const Register = () => {
 	const [gender, setGender] = useState('');
 	const [location, setLocation] = useState('');
 	const [password, setPassword] = useState('');
+	// const [role, setRole] = useState('');
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -277,10 +278,10 @@ const Register = () => {
 
 			<div className="register" >
 				<div className="registerPage">
-					<section class="container">
+					<section className="container">
 						<header>Registration Form</header>
 						<form onSubmit={(e) => handleSubmit(e)}>
-							<div class="input-box">
+							<div className="input-box">
 								<label className="label" >Full Name</label>
 								<Input
 									size="sm"
@@ -291,7 +292,7 @@ const Register = () => {
 									onChange={(e) => setFullname(e.target.value)}
 								/>
 							</div>
-							<div class="input-box">
+							<div className="input-box">
 								<label className="label">UserName</label>
 								<Input
 									size="sm"
@@ -302,7 +303,7 @@ const Register = () => {
 									onChange={(e) => setUsername(e.target.value)}
 								/>
 							</div>
-							<div class="input-box">
+							<div className="input-box">
 								<label className="label">Email Address</label>
 								<Input
 									size="sm"
@@ -313,7 +314,7 @@ const Register = () => {
 									onChange={(e) => setEmail(e.target.value)}
 								/>
 							</div>
-							<div class="input-box">
+							<div className="input-box">
 								<label className="label">Contact Details </label>
 								<Input
 									size="sm"
@@ -324,7 +325,7 @@ const Register = () => {
 									onChange={(e) => setPhone(e.target.value)}
 								/>
 							</div>
-							<div class="input-box">
+							<div className="input-box">
 								<label className="label">Gender</label>
 								<Input
 									size="sm"
@@ -335,7 +336,7 @@ const Register = () => {
 									onChange={(e) => setGender(e.target.value)}
 								/>
 							</div>
-							<div class="input-box">
+							<div className="input-box">
 								<label className="label">Location</label>
 								<Input
 									size="sm"
@@ -346,7 +347,7 @@ const Register = () => {
 									onChange={(e) => setLocation(e.target.value)}
 								/>
 							</div>
-							<div class="input-box">
+							<div className="input-box">
 								<label className="label">Password</label>
 								<Input
 									size="sm"
@@ -356,7 +357,6 @@ const Register = () => {
 									value={password}
 									onChange={(e) => setPassword(e.target.value)}
 								/>
-
 							</div>
 
 

@@ -1,31 +1,30 @@
 import React from 'react';
-import DashHeader from '../Compoments/DashHeader/DashHeader';
-import DashSidebar from '../Compoments/DashSidebar/DashSidebar';
 import AppContent from './AppContent';
+import DashAdminHeader from '../Compoments/DashHeader/DashAdminHeader';
+import DashAdminSidebar from '../Compoments/DashSidebar/DashAdminSidebar';
+import AppAdminContent from './AppAdminContent';
 
 
-const Layout = () => {
+const AdminLayout = () => {
     return (
         <>
             <div className="main_wrap">
-                <DashSidebar />
+                <DashAdminSidebar />
 
                 <div className="right_panel">
-                    <DashHeader />
+                    <DashAdminHeader />
 
                     <div className="content">
                         <div className="">
                             <div className='layoutWrapper'>
-                                <AppContent />
+                                <AppAdminContent />
                             </div>
                         </div>
-                        <p className='copyrights'>  © 2023, All Rights Reserved. Emploin  </p>
                     </div>
-
                 </div>
             </div>
         </>
     )
 }
 
-export default Layout;
+export default AdminLayout;

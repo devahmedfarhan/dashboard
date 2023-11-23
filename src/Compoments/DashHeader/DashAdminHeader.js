@@ -1,16 +1,14 @@
-
-import { Button } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Settings } from '@mui/icons-material';
+import MoreVert from '@mui/icons-material/MoreVert';
 import Dropdown from '@mui/joy/Dropdown';
-import IconButton from '@mui/joy/IconButton';
 import Menu from '@mui/joy/Menu';
 import MenuButton from '@mui/joy/MenuButton';
 import MenuItem from '@mui/joy/MenuItem';
-import MoreVert from '@mui/icons-material/MoreVert';
-import { Settings } from '@mui/icons-material';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const DashHeader = () => {
+
+const DashAdminHeader = () => {
     const navigate = useNavigate();
     const [isBodyClassActive, setIsBodyClassActive] = useState(false);
 
@@ -31,7 +29,6 @@ const DashHeader = () => {
     const toggleBodyClass = () => {
         setIsBodyClassActive(!isBodyClassActive);
     };
-
     return (
         <>
             <header className="d-flex align-items-center">
@@ -67,7 +64,6 @@ const DashHeader = () => {
                         </MenuButton>
                         <Menu>
                             <MenuItem>Profile</MenuItem>
-                            <MenuItem>My account</MenuItem>
                             <MenuItem onClick={handleNavigate}>Logout</MenuItem>
                         </Menu>
                     </Dropdown>
@@ -78,4 +74,4 @@ const DashHeader = () => {
     )
 }
 
-export default DashHeader
+export default DashAdminHeader;

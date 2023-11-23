@@ -42,6 +42,7 @@ const AddUser = () => {
             const data = await response.json();
             if (response.status === 201) {
                 setOpen(false);
+                window.location.reload();
             } else {
                 alert('error found')
             }
@@ -54,7 +55,7 @@ const AddUser = () => {
         <>
             <Button onClick={() => setOpen(true)}>Add User</Button>
 
-            <Modal open={open} onClose={() => setOpen(false)}>
+            <Modal open={open}>
                 <ModalDialog>
                     <DialogTitle>Create new project</DialogTitle>
                     <DialogContent>Fill in the information of the project.</DialogContent>

@@ -133,8 +133,11 @@ const Login = () => {
 				// body: JSON.stringify(data)
 			});
 			const data = await response.json();
+			console.log('data', data);
 			if (response.status === 200) {
 				localStorage.setItem('authUser', JSON.stringify(data?.token));
+				localStorage.setItem('authPerson', JSON.stringify(data?.data?.role));
+				localStorage.setItem('authFullName', JSON.stringify(data?.data?.fullname));
 				setTimeout(() => {
 					navigate('/dashboard');
 				}, [500]);

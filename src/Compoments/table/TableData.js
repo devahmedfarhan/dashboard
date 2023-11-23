@@ -88,7 +88,7 @@ const TableData = () => {
     }
     return (
         <>
-            <Modal open={open} onClose={() => setOpen(false)}>
+            <Modal open={open}>
                 <ModalDialog>
                     <DialogTitle>Edit User</DialogTitle>
                     <DialogContent>Fill in the information of the User.</DialogContent>

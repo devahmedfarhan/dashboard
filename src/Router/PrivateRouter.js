@@ -1,5 +1,6 @@
 import TableData from "../Compoments/table/TableData";
 import Dashboard from '../Admin/Dashboard';
+import AdminDashboard from "../Admin/AdminDashboard";
   
 // export const roles = {
 //     INDIVIDUAL: 'Employee',
@@ -16,6 +17,19 @@ export const LayoutItem = [
         path: "/",
         exact: true,
         component: Dashboard
+    },
+    {
+        path: "/user-management",
+        exact: true,
+        component: TableData
+    }
+];
+
+export const AdminLayoutItem = [
+    {
+        path: "/",
+        exact: true,
+        component: AdminDashboard
     },
     {
         path: "/user-management",
