@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
-import About from '../View/Pages/About';
-import IndustriesSolutions from '../View/Pages/IndustriesSolutions';
-import Resources from '../View/Pages/Resource';
-import Home from '../View/Pages/Home';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from '../Auth/Login';
 import Register from '../Auth/Register';
-import Job from '../View/Pages/Job';
-import Layout from '../Layout/Layout';
-import Dashboard from '../Admin/Dashboard';
-import ProtectedRoutes from './ProtectedRoutes';
 import AdminLayout from '../Layout/AdminLayout';
+import Layout from '../Layout/Layout';
+import About from '../View/Pages/About';
+import Home from '../View/Pages/Home';
+import IndustriesSolutions from '../View/Pages/IndustriesSolutions';
+import Job from '../View/Pages/Job';
+import LoginPage from '../Auth/LoginPage';
+import Resources from '../View/Pages/Resource';
 
 
 const Index = () => {
@@ -46,6 +45,7 @@ const Index = () => {
                 <Route path="/resource" element={<Resources />} />
                 <Route path="/register" exact element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/logins" element={<LoginPage />} />
 
 
                 {

@@ -14,12 +14,12 @@ const AdminLayout = () => {
                 <div className="right_panel">
                     <DashAdminHeader />
 
-                    <div className="content">
-                        <div className="">
-                            <div className='layoutWrapper'>
+                    {/* <div className="content"> */}
+                        <div className="d-flex">
+                            {/* <div className='layoutWrapper'> */}
                                 <AppAdminContent />
-                            </div>
-                        </div>
+                            {/* </div> */}
+                        {/* </div> */}
                     </div>
                 </div>
             </div>

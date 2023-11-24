@@ -4,7 +4,7 @@
 // import axios from '../api/axios';
 // const LOGIN_URL = '/auth';
 
-// const Login = () => {
+// const LoginBox = () => {
 // 	const { setAuth } = useContext(AuthContext);
 // 	const userRef = useRef();
 // 	const errRef = useRef();
@@ -49,7 +49,7 @@
 // 			} else if (err.response?.status === 401) {
 // 				setErrMsg('Unauthorized');
 // 			} else {
-// 				setErrMsg('Login Failed');
+// 				setErrMsg('LoginBox Failed');
 // 			}
 // 			errRef.current.focus();
 // 		}
@@ -108,7 +108,7 @@
 // 	);
 // };
 
-// export default Login;
+// export default LoginBox;
 
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -133,7 +133,6 @@ const Login = () => {
 				// body: JSON.stringify(data)
 			});
 			const data = await response.json();
-			console.log('data', data);
 			if (response.status === 200) {
 				localStorage.setItem('authUser', JSON.stringify(data?.token));
 				localStorage.setItem('authPerson', JSON.stringify(data?.data?.role));
@@ -158,7 +157,7 @@ const Login = () => {
 		<>
 		<div className="login">
 			<form onSubmit={(e) => handleSubmit(e)}>
-				<h1 >Login</h1>
+				<h1 >LoginBox</h1>
 				<input
 					type="text"
 					placeholder="Enter your username"

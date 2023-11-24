@@ -464,3 +464,104 @@ ExtraCss
   padding: 0px;
   margin: 0px;
 }
+
+
+
+/* 
+Grid Of Dashboards
+
+*/
+
+/* body {
+  display: flex;
+  height: 100vh;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+} */
+
+
+
+
+.d-flex
+{
+  display: flex;
+  
+}
+
+
+.Dashcontainer {
+  display: grid;
+  margin: 20px;
+  height: 100%;
+  width: 100%;
+  /* grid-template-columns: repeat(5, 1fr); */
+  /* grid-template-rows: repeat(3, 1fr) 3fr; */
+  grid-gap: 5px;
+}
+.Dashcontainer1 {
+  display: grid;
+ 
+  grid-template-columns: repeat(5, 1fr);
+
+  grid-gap: 5px;
+}
+
+.Dashcontainer2 {
+  display: grid;
+  
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-gap: 5px;
+}
+
+.Dashcontainer3 {
+  display: grid;
+  
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.Dashcontainer4 {
+   display: grid;
+ 
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+/* .layer {
+  color: white;
+  background-color: grey;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+
+
+@media screen and (max-width: 576px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .layer-6 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .layer-7 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .layer-10 {
+    grid-column: auto;
+  }
+}
+
+.LinkColorLight
+{
+  color: rgb(53, 53, 53);
+
+}

@@ -55,7 +55,7 @@ const AddUser = () => {
         <>
             <Button onClick={() => setOpen(true)}>Add User</Button>
 
-            <Modal open={open}>
+            <Modal open={open} onClose={() => setOpen(false)}>
                 <ModalDialog>
                     <DialogTitle>Create new project</DialogTitle>
                     <DialogContent>Fill in the information of the project.</DialogContent>

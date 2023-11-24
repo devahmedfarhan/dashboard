@@ -17,11 +17,6 @@ export const LayoutItem = [
         path: "/",
         exact: true,
         component: Dashboard
-    },
-    {
-        path: "/user-management",
-        exact: true,
-        component: TableData
     }
 ];
 
